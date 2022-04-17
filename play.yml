@@ -1,0 +1,26 @@
+---
+  - name: Automatizare swan
+    hosts: test1
+    
+    tasks:
+
+      - name: "Copiem rpt-ul nou pe servere"
+        copy:
+          src:
+          dest:
+          remote_src: yes
+          owner: root
+          group: root
+          mode: 0755
+      
+#      - name: "Inlocuim rpt-ul vechi cu cel nou"
+        #become: yes
+        #become_user: root
+#        lineinfile:
+#          path: /tmp/Reports.properties
+          # The String to Search
+#          regexp: "{{ RPTVECHI }}" 
+          # The String to Replace
+#          line: "{{ RPTNOU }}"
+#          state: present
+          #backup: yes
